@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="com.pengheng.IUserDao">
+
+    <select id="findAll" resultType="com.pengheng.pojo.User">
+        select * from user
+    </select>
+
+    <select id="selectOne" resultType="com.pengheng.pojo.User" parameterType="com.pengheng.pojo.User">
+        select * from user where id = #{id} and username = #{username}
+    </select>
+</mapper>

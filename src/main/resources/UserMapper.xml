@@ -2,10 +2,19 @@
 <mapper namespace="com.pengheng.IUserDao">
 
     <select id="findAll" resultType="com.pengheng.pojo.User">
-        select * from user
+        select * from tb_user
     </select>
 
     <select id="selectOne" resultType="com.pengheng.pojo.User" parameterType="com.pengheng.pojo.User">
-        select * from user where id = #{id} and username = #{username}
+        select * from tb_user where id = #{id} and username = #{username}
     </select>
+    <update id="updateUser" parameterType = "com.pengheng.pojo.User">
+        update tb_user set username = #{username} where id = #{id}
+    </update>
+    <insert id="insertUser" parameterType = "com.pengheng.pojo.User">
+        insert into tb_user(id,username) values(#{id},#{username})
+    </insert>
+    <delete id="deleteById" parameterType = "com.pengheng.pojo.User">
+        delete from tb_user where id = #{id}
+    </delete>
 </mapper>

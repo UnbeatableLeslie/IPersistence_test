@@ -15,4 +15,12 @@ public interface IUserDao {
     List<User> findAll();
 
     User selectOne(User user);
+
+    int insertUser(User user);
+
+    int deleteById(User user);
+
+    int updateUser(User user);
+
+
 }

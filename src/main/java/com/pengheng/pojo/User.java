@@ -10,6 +10,23 @@ public class User {
     private Integer id;
     private String username;
 
+
+    public User() {
+    }
+
+    public User(Integer id) {
+        this.id = id;
+    }
+
+    public User(String username) {
+        this.username = username;
+    }
+
+    public User(Integer id, String username) {
+        this.id = id;
+        this.username = username;
+    }
+
     public Integer getId() {
         return id;
     }
